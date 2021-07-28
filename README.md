@@ -1,9 +1,8 @@
 # javascript-algorithms
-Collections of javascript algorithm, aiming at interview and algorithm minds.
+Collections of javascript algorithms.
 
 ## 前言
-算法是coder内功心法修炼，更是实现高效程序代码的艺术手段。
-学习常见数据结构，积累常见算法题目并分类，掌握算法技巧，了解算法思想与本质。
+常见前端算法集锦以及思想。
 
 ## 学习目标
 + 数据结构：数组 链表 栈 队列 树 图
