@@ -19,5 +19,5 @@ const bubbleSort = (arr) => {
 // 时间复杂度O(n2) 性能不是最有
 console.log(bubbleSort([1, 2, 7, 3])) // [1,2,3,7]
 
-// 解法2 开发中...
+// 解法2 
 const bubbleSort2 = (arr) => {}
