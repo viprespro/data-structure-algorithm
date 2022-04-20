@@ -6,12 +6,11 @@
  * * 合：把2个数合并为有序数组，再对有序数组进行合并操作，直到全部子数组合成一个完整的数组。
  */
 function mergeSort(arr) {
-  // 采用自上而下的递归方法
   const len = arr.length
   if (len < 2) {
     return arr
   }
-  let middle = Math.floor(len / 2),
+  let middle = len >> 1,
     left = arr.slice(0, middle),
     right = arr.slice(middle)
   return merge(mergeSort(left), mergeSort(right))
@@ -19,7 +18,6 @@ function mergeSort(arr) {
 
 function merge(left, right) {
   const result = []
-
   // 1 2 3 步骤主要是对2个数组元素进行合并操作 并且有序
   // 1
   while (left.length && right.length) {

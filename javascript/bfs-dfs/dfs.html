@@ -1,0 +1,40 @@
+<!-- DFS:深度优先遍历 以遍历dom树节点为例 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dfs</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>123</h1>
+      <div>
+        <a href="#">hha</a>
+        <div>
+          <span>Demo</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 方式2 递归
+      const DFS = {
+        nodes: [],
+        do(root) {
+          for (let i = 0; i < root.childNodes.length; i++) {
+            var node = root.childNodes[i]
+            // 过滤 text 节点、script 节点
+            if (node.nodeType != 3 && node.nodeName != 'SCRIPT') {
+              this.nodes.push(node)
+              this.do(node)
+            }
+          }
+          return this.nodes
+        },
+      }
+      console.log(DFS.do(document.body))
+    </script>
+  </body>
+</html>

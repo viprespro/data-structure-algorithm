@@ -4,8 +4,7 @@
  * ! 实现思想：将数据按照一定的顺序一个一个的插入到有序的表中，最终得到序列就是已经排好的数据。
  */
 
-function insertionSort(arr) {
-  const l = arr.length
+const insert = function (arr) {
   let preIndex, current
   for (let i = 1; i < arr.length; i++) {
     preIndex = i - 1
@@ -19,4 +18,4 @@ function insertionSort(arr) {
   return arr
 }
 
-console.log(insertionSort([3, 1, 2, 5, 6, 9, 4, 10])) // [ 1, 2, 3, 4, 5, 6, 9, 10]
+console.log(insert([3, 1, 2, 5, 6, 9, 4, 10])) // [ 1, 2, 3, 4, 5, 6, 9, 10]
